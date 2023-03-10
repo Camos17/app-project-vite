@@ -5,6 +5,8 @@ import Button from './components/shared/button'
 import PokemonList from './components/pokemon/pokemon-list'
 import Personajes from './components/personajes/personajes'
 import Personaje from './components/personajes/personaje'
+import Post from './components/posts/post'
+import PokemonsInfo from './components/pokemon/pokemons-info'
 
 function App() {
   const [count, setCount] = useState(0);
@@ -84,6 +86,10 @@ function App() {
       </Personajes>
 
       {/* <PokemonList items={items}></PokemonList> */}
+
+      <Post></Post>
+
+      <PokemonsInfo></PokemonsInfo>
     </div>
   )
 }
