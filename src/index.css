@@ -55,6 +55,26 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+form {
+  background-color: lightblue;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1.5rem 2.5rem;
+  justify-content: center;
+}
+
+input {
+  display: block;
+  flex: 0 0 100%;
+  margin-bottom: 1rem;
+}
+
+.card {
+  background-color: lightgreen;
+  padding: 1rem 2rem;
+  border-radius: 0.25rem;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
