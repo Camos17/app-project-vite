@@ -12,7 +12,7 @@ const PokemonsInfo = () => {
     }
   ];
 
-  const deletePokemon = (id: number, event) => {
+  const deletePokemonHandler = (id: number, event) => {
     event.preventDefault();
     console.log(`Pokemon ID ${id} fue eliminado`);
   };
@@ -24,7 +24,7 @@ const PokemonsInfo = () => {
         pokemonsInfo.map((pokemon) => (
           <div key={pokemon.id}>
             <p>{pokemon.name}</p>
-            <button onClick={(e) => deletePokemon(pokemon.id, e)}>Eliminar pokemon</button>
+            <button onClick={(e) => deletePokemonHandler(pokemon.id, e)}>Eliminar pokemon</button>
           </div>
         ))
       }
