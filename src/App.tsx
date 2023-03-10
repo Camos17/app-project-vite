@@ -10,6 +10,17 @@ import PokemonsInfo from './components/pokemon/pokemons-info'
 
 function App() {
   const [count, setCount] = useState(0);
+  
+  const [userName, setUserName] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handlerOnChangeUserName = (e) => setUserName(e.target.value);
+  const handlerOnChangePassword = (e) => setPassword(e.target.value);
+
+  const handlerOnSubmitForm = (e) => {
+    e.preventDefault();
+    alert(`Bienvenido: ${userName}`);
+  };
 
   function downCount() {
     setCount((count) => {
@@ -92,6 +103,7 @@ function App() {
       <PokemonsInfo></PokemonsInfo>
     </div>
   )
+
 }
 
 export default App
