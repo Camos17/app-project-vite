@@ -69,10 +69,37 @@ input {
   margin-bottom: 1rem;
 }
 
-.card {
+.card-form {
   background-color: lightgreen;
   padding: 1rem 2rem;
   border-radius: 0.25rem;
+}
+
+
+.form-rejuvenate__container  {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.form-rejuvenate {
+  flex: 0 1 100%;
+}
+
+.form-rejuvenate > div {
+  display: flex;
+  flex: 0 1 100%;
+  flex-wrap: wrap;
+}
+
+.form-rejuvenate__error-message {
+  flex: 0 1 100%;
+  background-color: lightcoral;
+  color: white;
+  font-weight: bold;
+  font-size: 2rem;
 }
 
 @media (prefers-color-scheme: light) {
