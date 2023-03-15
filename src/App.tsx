@@ -8,6 +8,7 @@ import Personaje from './components/personajes/personaje'
 import Post from './components/posts/post'
 import PokemonsInfo from './components/pokemon/pokemons-info'
 import Card from './components/message-card/card'
+import Rejuvenate from './components/rejuvenate/rejuvenate-component'
 
 function App() {
   const [count, setCount] = useState(0);
@@ -29,7 +30,6 @@ function App() {
   };
 
   const validatePassword = (password: string) => {
-    debugger;
     const withoutSpace = password.trim();
     const passAsArray = withoutSpace.split('');
 
@@ -58,12 +58,10 @@ function App() {
 
     if (isUserNameValid && isPasswordValid) {
       setFormValid(true);
+      alert(`Bienvenido: ${userName}`);
     } else {
       setFormValid(false);
-    }
-
-
-    alert(`Bienvenido: ${userName}`);
+    }    
   };
 
   function downCount() {
@@ -170,6 +168,12 @@ function App() {
 
         {!isFormValid ? <p>Por favor chequea que la información sea correcta</p> : <Card userName={userName} password={password}></Card>}
       </div>
+
+
+      {/* FORM 2 */}
+      <Rejuvenate></Rejuvenate>
+
+
     </>
   )
 
