@@ -21,7 +21,6 @@ const Rejuvenate = () => {
   };
 
   const validateAge = (age: number) => {
-    debugger;
     if (age > 0) {
       return true;
     } else {
@@ -35,20 +34,20 @@ const Rejuvenate = () => {
     return reducedAge;
   };
 
-  const getErrorMessage = (validaName: boolean, validaAge: boolean): string => {
+  const getErrorMessage = (validName: boolean, validAge: boolean): string => {
     let errorMsg = '';
-    if (!validaName && !validaAge) {
+    if (!validName && !validAge) {
       errorMsg = 'Verifica el nombre y la edad ingresadas.';
-    } else if(!validaName) {
+    } else if(!validName) {
       errorMsg = 'Verifica que hayas ingresa el nombre.';
-    } else if(!validaAge) {
+    } else if(!validAge) {
       errorMsg = 'Verifica que hayas ingresa el año.';
     }
     return errorMsg;
   };
 
+  // TODO: Validate why does not change isValidAeField after changin valu in the input
   const handlerOnSubmit = (e: { preventDefault: () => void; }) => {
-    debugger;
     e.preventDefault();
 
     setIsValidNameField(validateName(name));
