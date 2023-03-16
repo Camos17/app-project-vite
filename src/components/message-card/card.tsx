@@ -1,6 +1,6 @@
 const Card = (props = {userName, password}) => {
     return (
-        <div className='card'>
+        <div className='card-form'>
             <h2>Mensaje en Card</h2>
             <span>{props.userName}</span>
             <span>{props.password}</span>
