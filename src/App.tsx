@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
 import Button from './components/shared/button'
@@ -9,6 +9,7 @@ import Post from './components/posts/post'
 import PokemonsInfo from './components/pokemon/pokemons-info'
 import Card from './components/message-card/card'
 import Rejuvenate from './components/rejuvenate/rejuvenate-component'
+import Order from './components/orders/order'
 
 function App() {
   const [count, setCount] = useState(0);
@@ -16,6 +17,11 @@ function App() {
   const [userName, setUserName] = useState('');
   const [password, setPassword] = useState('');
   const [isFormValid, setFormValid] = useState(false);
+  const [title, setTitle] = useState('Certified Tech Developer | Digital House');
+
+  useEffect(() => {
+    document.title = title;
+  }, [title]);
 
   const handlerOnChangeUserName = (e) => setUserName(e.target.value);
   const handlerOnChangePassword = (e) => setPassword(e.target.value);
@@ -173,6 +179,9 @@ function App() {
       {/* FORM 2 */}
       <Rejuvenate></Rejuvenate>
 
+      {/* USO USEEFFECT */}
+      <Order></Order>
+      
 
     </>
   )
