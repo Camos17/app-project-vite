@@ -10,6 +10,7 @@ import PokemonsInfo from './components/pokemon/pokemons-info'
 import Card from './components/message-card/card'
 import Rejuvenate from './components/rejuvenate/rejuvenate-component'
 import Order from './components/orders/order'
+import ListEmail from './components/lists/list-email'
 
 function App() {
   const [count, setCount] = useState(0);
@@ -182,7 +183,7 @@ function App() {
       {/* USO USEEFFECT */}
       <Order></Order>
       
-
+      {/* <ListEmail></ListEmail> */}
     </>
   )
 

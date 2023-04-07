@@ -7,8 +7,9 @@ const ListEmail = () => {
     const getApiData = async () => {
         
         const apiData = await fetch('https://jsonplaceholder.typicode.com/comments');
-        const parsedData = await apiData.json();
+        let parsedData = await apiData.json();
         console.log('parsedData', parsedData);
+        parsedData = parsedData.map((obj: any) => <li>{obj.email}</li>);
         setVector(parsedData);
     };
 
@@ -19,7 +20,8 @@ const ListEmail = () => {
     return(
         <div>
             <ul>
-                {vector.map((obj: any) => <li>{obj.email}</li>)}
+                {/* {vector.map((obj: any) => <li>{obj.email}</li>)} */}
+                {vector}
             </ul>
         </div>
     );
